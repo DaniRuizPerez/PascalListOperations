@@ -1,0 +1,33 @@
+A usuario3              normal               rock
+A usuario1              normal               clasica
+A usuario2              premium              rock
+C usuario1              rock                 cancion11
+C usuario1              rock                 cancion12                        
+M publicidad1                                                                   {Envio de publicidad1 a usuarios 1 y 3}
+E rock                  novedad1                                                {Envio de novedad1 a usuarios 2 y 3}
+C usuario2              rock                 cancion21                          
+C usuario3              rock                 cancion31
+C usuario1              rock                 cancion13
+C usuario1              rock                 cancion14 
+P usuario1                                                                      {Reproduce cancion11}
+P usuario1                                                                      {Reproduce cancion12} 
+P usuario1                                                                      {Reproduce publicidad1}
+P usuario1                                                                      {Reproduce cancion13}
+P usuario1                                                                      {Error: num max reproducciones}
+S
+U usuario1
+P usuario1                                                                      {Reproduce cancion14}
+C usuario1              clasica              cancion15
+P usuario2                                                                      {Reproduce cancion21}
+P usuario3                                                                      {Reproduce publicidad1}
+P usuario3                                                                      {Reproduce cancion31}
+U usuario3
+S
+M publicidad2                                                                   {No hay usuarios de tipo normal}
+N usuario2                                                                      {novedad1 en cola de reproduccion}
+P usuario2                                                                      {Reproduce novedad1}
+N usuario1                                                                      {Error: no hay novedades}
+B usuario1
+C usuario2              clasica              cancion22
+B usuario2
+B usuario3
